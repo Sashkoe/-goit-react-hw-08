@@ -15,13 +15,13 @@ import { RestrictedRoute } from './routes/RestrictedRoute';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
-const RegistrationPage = lazy(() => import('./pages/ RegistrationPage/RegistrationPage'));
+const RegistrationPage = lazy(() => import('./pages/RegistrationPage/RegistrationPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 
 const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useSelector(selectIsRefreshing);
+  const  isRefreshing  = useSelector(selectIsRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
